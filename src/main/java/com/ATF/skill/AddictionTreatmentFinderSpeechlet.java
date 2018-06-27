@@ -160,6 +160,10 @@ public class AddictionTreatmentFinderSpeechlet implements SpeechletV2 {
             log.debug("inside the " + intent.getName());
 
             return addictionTreatmentFinderManager.getConnectIntentResponse(intent, session, skillContext);
+        } else if ("LgbtGoBackIntent".equals(intent.getName())) {
+            log.debug("inside the " + intent.getName());
+
+            return addictionTreatmentFinderManager.getLgbtGoBackIntentResponse(intent, session, skillContext);
         } else {
             throw new IllegalArgumentException("Unrecognized intent: " + intent.getName());
         }

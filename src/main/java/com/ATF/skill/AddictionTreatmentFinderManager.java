@@ -68,6 +68,23 @@ public class AddictionTreatmentFinderManager {
         addictionTreatmentFinderDao = new AddictionTreatmentFinderDao(dynamoDbClient);
     }
 
+    public SpeechletResponse getLgbtGoBackIntentResponse (Intent intent, Session session, SkillContext skillContext) {
+
+        Integer stepInSession = (Integer) session.getAttribute("SESSION-STEP");
+        AddictionUserData addictionUserData = skillContext.getAddictionUserData();
+
+        log.debug("getLgbtGoBackIntentResponse STEP in Session - " + stepInSession.intValue());
+
+        if (stepInSession == null) {
+            return getAskSpeechletResponse(propertyReader.getWelcomeMessage(), propertyReader.getSpeechReprompt());
+        }
+        int iStepInSession = stepInSession.intValue();
+        session.setAttribute("SESSION-STEP", iStepInSession-1);
+        return getAskSpeechletResponse(propertyReader.getQuestion2overlgbt(), propertyReader.getQuestion2overlgbt());
+    }
+
+
+
     public SpeechletResponse getCityStateIntentResponse (Intent intent, Session session, SkillContext skillContext) {
 
         Integer stepInSession = (Integer) session.getAttribute("SESSION-STEP");
@@ -220,6 +237,19 @@ public class AddictionTreatmentFinderManager {
             skillContext.setAddictionUserData(addictionUserData);
             session.setAttribute("SESSION-STEP", new Integer(addictionUserData.getQuestionPhase()));
             return getAskSpeechletResponse(propertyReader.getQuestion1(), propertyReader.getSpeechReprompt());
+        } else if (iStepInSession == 3 && overAgeUserExperienceBegin.equals("over 18")) {
+            String userAge = (String) session.getAttribute("SESSION-USER_AGE");
+            addictionUserData = AddictionUserData.newInstance();
+            addictionUserData.setAgeType(userAge);
+            addictionUserData.setQuestionPhase(iStepInSession+1); //set the state of the next question
+            addictionUserData.setLgbt("lgbt");
+
+            log.debug("In 1 Addiction data - " + addictionUserData.toString());
+            skillContext.setAddictionUserData(addictionUserData);
+            session.setAttribute("SESSION-USER_AGE", addictionUserData.getAgeType());
+            session.setAttribute("SESSION-STEP", new Integer(addictionUserData.getQuestionPhase()));
+            session.setAttribute("SESSION-LGBT", addictionUserData.getLgbt());
+            return getAskSpeechletResponse(propertyReader.getQuestion2overlgbtConnect(), propertyReader.getQuestion2overlgbtConnect());
         } else {
             return getTellSpeechletResponse(propertyReader.getFatalError());
         }

@@ -108,6 +108,32 @@
             "Search Providers",
             "Search"
           ]
+        },
+        {
+          "name": "CaptureCityStateIntent",
+          "slots": [
+            {
+              "name": "City",
+              "type": "LIST_OF_CITIES"
+            },
+            {
+              "name": "State",
+              "type": "LIST_OF_STATES"
+            }
+          ],
+          "samples": [
+            "{City} city in {State}",
+            "{City} in {State} state",
+            "{City} in {State}",
+            "{City} city in {State} state"
+          ]
+        },
+        {
+          "name": "LgbtGoBackIntent",
+          "slots": [],
+          "samples": [
+            "go back"
+          ]
         }
       ],
       "types": [
@@ -137,6 +163,46 @@
             {
               "name": {
                 "value": "under eighteen"
+              }
+            }
+          ]
+        },
+        {
+          "name": "LIST_OF_CITIES",
+          "values": [
+            {
+              "name": {
+                "value": "Edison"
+              }
+            },
+            {
+              "name": {
+                "value": "Seattle"
+              }
+            },
+            {
+              "name": {
+                "value": "New York"
+              }
+            }
+          ]
+        },
+        {
+          "name": "LIST_OF_STATES",
+          "values": [
+            {
+              "name": {
+                "value": "New Jersey"
+              }
+            },
+            {
+              "name": {
+                "value": "New York"
+              }
+            },
+            {
+              "name": {
+                "value": "Washington"
               }
             }
           ]

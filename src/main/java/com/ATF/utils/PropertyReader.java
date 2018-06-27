@@ -31,6 +31,7 @@ public class PropertyReader {
 
     private String question2over = "";
     private String question2overlgbt = "";
+    private String question2overlgbtConnect = "";
 
     private String question3over = "";
 
@@ -69,6 +70,8 @@ public class PropertyReader {
 
             question2over = skillProperties.getProperty("question-2-Over");
             question2overlgbt = skillProperties.getProperty("question-2-Over-LGBT");
+            question2overlgbtConnect = skillProperties.getProperty("question-2-Over-LGBT-Connect");
+
 
             question3over = skillProperties.getProperty("question-3-Over");
 
@@ -161,6 +164,10 @@ public class PropertyReader {
 
     public String getQuestion3underCityState () {
         return question3underCityState;
+    }
+
+    public String getQuestion2overlgbtConnect () {
+        return question2overlgbtConnect;
     }
 
     public String getQuestionunderphonecall () {
