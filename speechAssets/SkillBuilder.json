@@ -1,0 +1,147 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "addiction treatment finder",
+      "intents": [
+        {
+          "name": "AddUserIntent",
+          "slots": [
+            {
+              "name": "UserName",
+              "type": "LIST_OF_USER_NAMES"
+            }
+          ],
+          "samples": [
+            "add player {UserName}",
+            "add {UserName}",
+            "add {UserName} to the game",
+            "add player {UserName} to the game",
+            "{UserName}"
+          ]
+        },
+        {
+          "name": "AddScoreIntent",
+          "slots": [
+            {
+              "name": "UserName",
+              "type": "LIST_OF_USER_NAMES"
+            },
+            {
+              "name": "ScoreNumber",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "give {UserName} {ScoreNumber}",
+            "give {UserName} {ScoreNumber} points",
+            "{ScoreNumber} more for {UserName}",
+            "{ScoreNumber} for {UserName}",
+            "give {UserName} {ScoreNumber} more points",
+            "{ScoreNumber} more points for {UserName}",
+            "{ScoreNumber} points for {UserName}"
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "stop",
+            "no"
+          ]
+        },
+        {
+          "name": "NewUserIntent",
+          "slots": [],
+          "samples": [
+            "yes"
+          ]
+        },
+        {
+          "name": "UserAgeIntent",
+          "slots": [
+            {
+              "name": "UserAge",
+              "type": "LIST_OF_USER_AGES"
+            }
+          ],
+          "samples": [
+            "{UserAge}"
+          ]
+        },
+        {
+          "name": "ResetPlayersIntent",
+          "slots": [],
+          "samples": [
+            "clear",
+            "clear a game"
+          ]
+        },
+        {
+          "name": "TellScoresIntent",
+          "slots": [],
+          "samples": [
+            "give me the numbers",
+            "give me the scoreboard"
+          ]
+        },
+        {
+          "name": "ConnectCallIntent",
+          "slots": [],
+          "samples": [
+            "Connect the call",
+            "Connect"
+          ]
+        },
+        {
+          "name": "SearchProviderIntent",
+          "slots": [],
+          "samples": [
+            "Search Providers",
+            "Search"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "LIST_OF_USER_NAMES",
+          "values": [
+            {
+              "name": {
+                "value": "aaron"
+              }
+            },
+            {
+              "name": {
+                "value": "abbie"
+              }
+            }
+          ]
+        },
+        {
+          "name": "LIST_OF_USER_AGES",
+          "values": [
+            {
+              "name": {
+                "value": "over eighteen"
+              }
+            },
+            {
+              "name": {
+                "value": "under eighteen"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
