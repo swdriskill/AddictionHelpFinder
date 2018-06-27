@@ -21,6 +21,7 @@ public class PropertyReader {
     private String speechReprompt= "";
     private String speechSorry = "";
     private String speechConnect = "";
+    private String questionname = "";
     private String speechNo = "";
     private String question0 = "";
     private String question1 = "";
@@ -36,7 +37,6 @@ public class PropertyReader {
     private String question3over = "";
 
     private String question4over = "";
-
 
 
     private String skillId = "";
@@ -71,6 +71,7 @@ public class PropertyReader {
             question2over = skillProperties.getProperty("question-2-Over");
             question2overlgbt = skillProperties.getProperty("question-2-Over-LGBT");
             question2overlgbtConnect = skillProperties.getProperty("question-2-Over-LGBT-Connect");
+            questionname = skillProperties.getProperty("question-name");
 
 
             question3over = skillProperties.getProperty("question-3-Over");
@@ -160,6 +161,10 @@ public class PropertyReader {
 
     public String getQuestion4over () {
         return question4over;
+    }
+
+    public String getQuestionname () {
+        return questionname;
     }
 
     public String getQuestion3underCityState () {

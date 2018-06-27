@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="065bb9f5-695c-47d8-a58b-e77972b20728" name="Default" comment="" />
+    <list default="true" id="065bb9f5-695c-47d8-a58b-e77972b20728" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/speechAssets/SkillBuilder.json" afterPath="$PROJECT_DIR$/speechAssets/SkillBuilder.json" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechlet.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionHelperData.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinder.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/skill.properties" afterPath="$PROJECT_DIR$/src/main/resources/skill.properties" />
+      <change beforePath="$PROJECT_DIR$/target/Addiction-Help-Finder-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/target/Addiction-Help-Finder-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <change beforePath="$PROJECT_DIR$/target/Addiction-Help-Finder-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/Addiction-Help-Finder-1.0-SNAPSHOT.jar" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/skill/AddictionTreatmentFinderManager.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/skill/AddictionTreatmentFinderManager.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechlet.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechlet.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionHelperData.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinder$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinder$ScoreComparator.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinder.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinder.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderDao.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem$AddictionTreatmentFinderDataMarshaller$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem$AddictionTreatmentFinderDataMarshaller.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem$AddictionTreatmentFinderDataMarshaller.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/utils/PropertyReader.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/utils/PropertyReader.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/skill.properties" afterPath="$PROJECT_DIR$/target/classes/skill.properties" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,9 +42,46 @@
       <file leaf-file-name="AddictionTreatmentFinderManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+            <state relative-caret-position="439">
+              <caret line="161" column="8" lean-forward="false" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddictionTreatmentFinderDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="41" column="7" lean-forward="false" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddictionTreatmentFinderUserDataItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="51" column="48" lean-forward="false" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddictionTreatmentFinder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="51" column="10" lean-forward="false" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+              <folding>
+                <element signature="e#1251#1252#0" expanded="true" />
+                <element signature="e#1281#1282#0" expanded="true" />
+                <element signature="e#1327#1328#0" expanded="true" />
+                <element signature="e#1358#1359#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -26,32 +89,9 @@
       <file leaf-file-name="skill.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/skill.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="28" />
+            <state relative-caret-position="504">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PropertyReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="168" column="50" lean-forward="false" selection-start-line="168" selection-start-column="50" selection-end-line="168" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4490#4491#0" expanded="true" />
-                <element signature="e#4526#4527#0" expanded="true" />
-                <element signature="e#4571#4572#0" expanded="true" />
-                <element signature="e#4611#4612#0" expanded="true" />
-                <element signature="e#4652#4653#0" expanded="true" />
-                <element signature="e#4688#4689#0" expanded="true" />
-                <element signature="e#4729#4730#0" expanded="true" />
-                <element signature="e#4765#4766#0" expanded="true" />
-                <element signature="e#4816#4817#0" expanded="true" />
-                <element signature="e#4862#4863#0" expanded="true" />
-                <element signature="e#4961#4962#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -59,18 +99,8 @@
       <file leaf-file-name="SkillBuilder.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/speechAssets/SkillBuilder.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1678">
-              <caret line="212" column="1" lean-forward="false" selection-start-line="212" selection-start-column="1" selection-end-line="212" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddictionTreatmentFinderSpeechlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="162" column="36" lean-forward="false" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="36" />
+            <state relative-caret-position="309">
+              <caret line="98" column="22" lean-forward="false" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -81,10 +111,16 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>setAge</find>
-      <find>connec</find>
       <find>AGE</find>
       <find>SESSION-USER_AGE</find>
+      <find>conn</find>
+      <find>About</find>
+      <find>About to save</find>
+      <find>connec</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/java/com/ATF</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -105,10 +141,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderTextUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionHelperData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderDynamoDbClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionUserData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/utils/ActiveCallsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/utils/DateUtils.java" />
@@ -131,6 +164,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechlet.java" />
         <option value="$PROJECT_DIR$/speechAssets/SkillBuilder.json" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java" />
       </list>
     </option>
@@ -367,12 +403,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530046335225</updated>
-      <workItem from="1530046338123" duration="4887000" />
+      <workItem from="1530046338123" duration="11691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4887000" />
+    <option name="totallyTimeSpent" value="11691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="288" y="30" width="1304" height="947" extended-state="0" />
@@ -393,6 +429,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32408875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -403,7 +440,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -430,54 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionHelperData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderDynamoDbClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionUserData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -614,65 +602,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechletRequestStreamHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="374">
+          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
+            <element signature="e#4600#4601#0" expanded="false" />
+            <element signature="e#4636#4637#0" expanded="false" />
+            <element signature="e#4681#4682#0" expanded="false" />
+            <element signature="e#4721#4722#0" expanded="false" />
+            <element signature="e#4762#4763#0" expanded="false" />
+            <element signature="e#4798#4799#0" expanded="false" />
+            <element signature="e#4839#4840#0" expanded="false" />
+            <element signature="e#4875#4876#0" expanded="false" />
+            <element signature="e#4915#4916#0" expanded="false" />
+            <element signature="e#4950#4951#0" expanded="false" />
+            <element signature="e#5001#5002#0" expanded="false" />
+            <element signature="e#5047#5048#0" expanded="false" />
+            <element signature="e#5099#5100#0" expanded="false" />
+            <element signature="e#5146#5147#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/skill.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionHelperData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speechAssets/SkillBuilder.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="98" column="22" lean-forward="false" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionUserData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechletRequestStreamHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-dynamodb/1.9.40/aws-java-sdk-dynamodb-1.9.40.jar!/com/amazonaws/services/dynamodbv2/datamodeling/DynamoDBMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="164" column="17" lean-forward="false" selection-start-line="164" selection-start-column="17" selection-end-line="164" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderDynamoDbClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="51" column="10" lean-forward="false" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+          <folding>
+            <element signature="e#1251#1252#0" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="51" column="48" lean-forward="false" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="41" column="7" lean-forward="false" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="162" column="36" lean-forward="false" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/skill.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="168" column="50" lean-forward="false" selection-start-line="168" selection-start-column="50" selection-end-line="168" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4490#4491#0" expanded="true" />
-            <element signature="e#4526#4527#0" expanded="true" />
-            <element signature="e#4571#4572#0" expanded="true" />
-            <element signature="e#4611#4612#0" expanded="true" />
-            <element signature="e#4652#4653#0" expanded="true" />
-            <element signature="e#4688#4689#0" expanded="true" />
-            <element signature="e#4729#4730#0" expanded="true" />
-            <element signature="e#4765#4766#0" expanded="true" />
-            <element signature="e#4816#4817#0" expanded="true" />
-            <element signature="e#4862#4863#0" expanded="true" />
-            <element signature="e#4961#4962#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speechAssets/SkillBuilder.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1678">
-          <caret line="212" column="1" lean-forward="false" selection-start-line="212" selection-start-column="1" selection-end-line="212" selection-end-column="1" />
+        <state relative-caret-position="295">
+          <caret line="156" column="66" lean-forward="true" selection-start-line="156" selection-start-column="66" selection-end-line="156" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+        <state relative-caret-position="439">
+          <caret line="161" column="8" lean-forward="false" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
           <folding />
         </state>
       </provider>

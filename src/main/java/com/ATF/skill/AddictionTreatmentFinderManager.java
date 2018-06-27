@@ -23,11 +23,8 @@ import main.java.com.ATF.utils.PropertyReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.Array;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
 import java.util.SortedMap;
 
 /**
@@ -153,6 +150,23 @@ public class AddictionTreatmentFinderManager {
     public SpeechletResponse getConnectIntentResponse (Intent intent, Session session, SkillContext skillContext) {
         log.debug("In getConnectIntentResponse");
 
+        // Load the previous game
+        AddictionTreatmentFinder treatmentFinder = addictionTreatmentFinderDao.getUserData(session);
+
+        if (treatmentFinder == null) {
+            treatmentFinder = AddictionTreatmentFinder.newInstance(session, skillContext.getAddictionUserData());
+        }
+
+        log.debug("in getConnectIntentResponse 1 " + skillContext.getAddictionUserData().toString());
+        treatmentFinder.setUserData(skillContext.getAddictionUserData());
+        
+        log.debug("in getConnectIntentResponse 2 " + skillContext.getAddictionUserData().toString());
+        log.debug("About to save - " + treatmentFinder.getUserData().toString());
+
+
+        // Save the updated game
+        addictionTreatmentFinderDao.setUserData(treatmentFinder);
+
         return getAskSpeechletResponse(propertyReader.getSpeechConnect(), propertyReader.getSpeechReprompt());
     }
 
@@ -173,7 +187,7 @@ public class AddictionTreatmentFinderManager {
 
 /* Commenting till i know better TODO
         String speechText, repromptText;
-        AddictionTreatmentFinder game = addictionTreatmentFinderDao.getScoreKeeperGame(session);
+        AddictionTreatmentFinder game = addictionTreatmentFinderDao.getUserData(session);
 
         if (game == null || !game.hasPlayers()) {
             speechText = "ScoreKeeper, Let's start your game. Who's your first player?";
@@ -256,7 +270,7 @@ public class AddictionTreatmentFinderManager {
 
 
 /*
-        AddictionTreatmentFinder ongoingSession = addictionTreatmentFinderDao.getScoreKeeperGame(session);
+        AddictionTreatmentFinder ongoingSession = addictionTreatmentFinderDao.getUserData(session);
 
         if (game == null) {
             return getAskSpeechletResponse("New game started. Who's your first player?",
@@ -331,7 +345,7 @@ public class AddictionTreatmentFinderManager {
         return getAskSpeechletResponse(propertyReader.getQuestion1(), propertyReader.getSpeechReprompt());
 /*
         // Load the previous game
-        AddictionTreatmentFinder game = addictionTreatmentFinderDao.getScoreKeeperGame(session);
+        AddictionTreatmentFinder game = addictionTreatmentFinderDao.getUserData(session);
         if (game == null) {
             game = AddictionTreatmentFinder.newInstance(session, AddictionHelperData.newInstance());
         }
@@ -383,61 +397,35 @@ public class AddictionTreatmentFinderManager {
         String newUserName =
                 AddictionTreatmentFinderTextUtil.getUserName(intent.getSlot(SLOT_USER_NAME).getValue());
         if (newUserName == null) {
-            String speechText = "OK. Who do you want to add?";
+            String speechText = "I did not catch that. Can you tell me your name please?";
             return getAskSpeechletResponse(speechText, speechText);
         }
 
         // Load the previous game
-        AddictionTreatmentFinder game = addictionTreatmentFinderDao.getScoreKeeperGame(session);
-        if (game == null) {
-            game = AddictionTreatmentFinder.newInstance(session, AddictionHelperData.newInstance());
+        AddictionTreatmentFinder treatmentFinder = addictionTreatmentFinderDao.getUserData(session);
+        if (treatmentFinder == null) {
+            treatmentFinder = AddictionTreatmentFinder.newInstance(session, AddictionUserData.newInstance());
         }
 
-        game.addPlayer(newUserName);
+//        addictionTreatmentFinderDao.addPlayer(newUserName);
 
         // Save the updated game
-        addictionTreatmentFinderDao.saveScoreKeeperGame(game);
+        addictionTreatmentFinderDao.setUserData(treatmentFinder);
 
-        String speechText = newUserName + " has joined your game. ";
-        String repromptText = null;
-
-        if (skillContext.needsMoreHelp()) {
-            if (game.getNumberOfPlayers() == 1) {
-                speechText += "You can say, I am done adding players. Now who's your next player?";
-
-            } else {
-                speechText += "Who is your next player?";
-            }
-            repromptText = AddictionTreatmentFinderTextUtil.NEXT_HELP;
-        }
-
-        if (repromptText != null) {
-            return getAskSpeechletResponse(speechText, repromptText);
-        } else {
-            return getTellSpeechletResponse(speechText);
-        }
+        String speechText = "Welcome " + newUserName + " has joined your game. ";
+        return getTellSpeechletResponse(speechText);
     }
 
-    /**
-     * Creates and returns response for the add score intent.
-     *
-     * @param intent
-     *            {@link Intent} for this request
-     * @param session
-     *            {@link Session} for this request
-     * @param skillContext
-     *            {@link SkillContext} for this request
-     * @return response for the add score intent
-     */
+
     public SpeechletResponse getAddScoreIntentResponse(Intent intent, Session session,
                                                        SkillContext skillContext) {
-        String playerName =
+        String userName =
                 AddictionTreatmentFinderTextUtil.getUserName(intent.getSlot(SLOT_USER_NAME).getValue());
-        if (playerName == null) {
+        if (userName == null) {
             String speechText = "Sorry, I did not hear the player name. Please say again?";
             return getAskSpeechletResponse(speechText, speechText);
         }
-
+/*
         int score = 0;
         try {
             score = Integer.parseInt(intent.getSlot(SLOT_SCORE_NUMBER).getValue());
@@ -445,64 +433,16 @@ public class AddictionTreatmentFinderManager {
             String speechText = "Sorry, I did not hear the points. Please say again?";
             return getAskSpeechletResponse(speechText, speechText);
         }
-
-        AddictionTreatmentFinder game = addictionTreatmentFinderDao.getScoreKeeperGame(session);
-        if (game == null) {
+*/
+        AddictionTreatmentFinder treatmentFinder = addictionTreatmentFinderDao.getUserData(session);
+        if (treatmentFinder == null) {
             return getTellSpeechletResponse("A game has not been started. Please say New Game to "
                     + "start a new game before adding scores.");
         }
 
-        if (game.getNumberOfPlayers() == 0) {
-            String speechText = "Sorry, no player has joined the game yet. What can I do for you?";
-            return getAskSpeechletResponse(speechText, speechText);
-        }
 
-        // Update score
-        if (!game.addScoreForPlayer(playerName, score)) {
-            String speechText = "Sorry, " + playerName + " has not joined the game. What else?";
-            return getAskSpeechletResponse(speechText, speechText);
-        }
 
-        // Save game
-        addictionTreatmentFinderDao.saveScoreKeeperGame(game);
-
-        // Prepare speech text. If the game has less than 3 players, skip reading scores for each
-        // player for brevity.
-        String speechText = score + " for " + playerName + ". ";
-        if (game.getNumberOfPlayers() > MAX_PLAYERS_FOR_SPEECH) {
-            speechText += playerName + " has " + game.getScoreForPlayer(playerName) + " in total.";
-        } else {
-            speechText += getAllScoresAsSpeechText(game.getAllScoresInDescndingOrder());
-        }
-
-        return getTellSpeechletResponse(speechText);
-    }
-
-    /**
-     * Creates and returns response for the tell scores intent.
-     *
-     * @param intent
-     *            {@link Intent} for this request
-     * @param session
-     *            {@link Session} for this request
-     * @return response for the tell scores intent
-     */
-    public SpeechletResponse getTellScoresIntentResponse(Intent intent, Session session) {
-        // tells the scores in the leaderboard and send the result in card.
-        AddictionTreatmentFinder game = addictionTreatmentFinderDao.getScoreKeeperGame(session);
-
-        if (game == null || !game.hasPlayers()) {
-            return getTellSpeechletResponse("Nobody has joined the game.");
-        }
-
-        SortedMap<String, Long> sortedScores = game.getAllScoresInDescndingOrder();
-        String speechText = getAllScoresAsSpeechText(sortedScores);
-        Card leaderboardScoreCard = getLeaderboardScoreCard(sortedScores);
-
-        PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
-        speech.setText(speechText);
-
-        return SpeechletResponse.newTellResponse(speech, leaderboardScoreCard);
+        return getTellSpeechletResponse("Should not be here");
     }
 
     /**
@@ -516,9 +456,9 @@ public class AddictionTreatmentFinderManager {
      */
     public SpeechletResponse getResetPlayersIntentResponse(Intent intent, Session session) {
         // Remove all players
-        AddictionTreatmentFinder game =
-                AddictionTreatmentFinder.newInstance(session, AddictionHelperData.newInstance());
-        addictionTreatmentFinderDao.saveScoreKeeperGame(game);
+        AddictionTreatmentFinder treatmentFinder =
+                AddictionTreatmentFinder.newInstance(session, AddictionUserData.newInstance());
+        addictionTreatmentFinderDao.setUserData(treatmentFinder);
         session.setAttribute("SESSION-STEP", new Integer(0));
         session.setAttribute("USER-ADDICTION-DATA", AddictionUserData.newInstance());
 

@@ -123,11 +123,6 @@ public class AddictionTreatmentFinderSpeechlet implements SpeechletV2 {
 
             return addictionTreatmentFinderManager.getAddScoreIntentResponse(intent, session, skillContext);
 
-        } else if ("TellScoresIntent".equals(intent.getName())) {
-            log.debug("inside the " + intent.getName());
-
-            return addictionTreatmentFinderManager.getTellScoresIntentResponse(intent, session);
-
         } else if ("ResetPlayersIntent".equals(intent.getName())) {
             log.debug("inside the " + intent.getName());
 

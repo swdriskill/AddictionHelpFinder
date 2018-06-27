@@ -86,14 +86,6 @@
           ]
         },
         {
-          "name": "TellScoresIntent",
-          "slots": [],
-          "samples": [
-            "give me the numbers",
-            "give me the scoreboard"
-          ]
-        },
-        {
           "name": "ConnectCallIntent",
           "slots": [],
           "samples": [

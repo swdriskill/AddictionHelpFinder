@@ -1,12 +1,16 @@
 package main.java.com.ATF.storage;
 
 import com.amazon.speech.speechlet.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Contains the methods to interact with the persistence layer for ScoreKeeper in DynamoDB.
  */
 public class AddictionTreatmentFinderDao {
     private final AddictionTreatmentFinderDynamoDbClient dynamoDbClient;
+    private static final Logger log = LoggerFactory.getLogger(AddictionTreatmentFinderDao.class);
+
 
     public AddictionTreatmentFinderDao (AddictionTreatmentFinderDynamoDbClient dynamoDbClient) {
         this.dynamoDbClient = dynamoDbClient;
@@ -20,7 +24,7 @@ public class AddictionTreatmentFinderDao {
      * @param session
      * @return
      */
-    public AddictionTreatmentFinder getScoreKeeperGame(Session session) {
+    public AddictionTreatmentFinder getUserData (Session session) {
         AddictionTreatmentFinderUserDataItem item = new AddictionTreatmentFinderUserDataItem();
         item.setCustomerId(session.getUser().getUserId());
 
@@ -36,12 +40,15 @@ public class AddictionTreatmentFinderDao {
     /**
      * Saves the {@link AddictionTreatmentFinder} into the database.
      * 
-     * @param game
+     * @param treatmentFinder
      */
-    public void saveScoreKeeperGame(AddictionTreatmentFinder game) {
+    public void setUserData(AddictionTreatmentFinder treatmentFinder) {
         AddictionTreatmentFinderUserDataItem item = new AddictionTreatmentFinderUserDataItem();
-        item.setCustomerId(game.getSession().getUser().getUserId());
-        item.setUserData(game.getGameData());
+        item.setCustomerId(treatmentFinder.getSession().getUser().getUserId());
+        item.setUserData(treatmentFinder.getUserData());
+
+        log.debug("In setUserData  + " + item.getCustomerId());
+        log.debug("In setUserData  + " + item.getUserData().toString());
 
         dynamoDbClient.saveItem(item);
     }

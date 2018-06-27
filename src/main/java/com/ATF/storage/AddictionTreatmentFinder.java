@@ -13,115 +13,57 @@ import java.util.TreeMap;
  */
 public final class AddictionTreatmentFinder {
     private Session session;
-    private AddictionHelperData gameData;
+    private AddictionUserData userData;
 
     private AddictionTreatmentFinder () {
     }
 
     /**
      * Creates a new instance of {@link AddictionTreatmentFinder} with the provided {@link Session} and
-     * {@link AddictionHelperData}.
+     * {@link AddictionUserData}.
      * <p>
-     * To create a new instance of {@link AddictionHelperData}, see
-     * {@link AddictionHelperData#newInstance()}
+     * To create a new instance of {@link AddictionUserData}, see
+     * {@link AddictionUserData#newInstance()}
      * 
      * @param session
-     * @param gameData
+     * @param userData
      * @return
-     * @see AddictionHelperData#newInstance()
+     * @see AddictionUserData#newInstance()
      */
-    public static AddictionTreatmentFinder newInstance(Session session, AddictionHelperData gameData) {
-        AddictionTreatmentFinder game = new AddictionTreatmentFinder();
-        game.setSession(session);
-        game.setGameData(gameData);
-        return game;
+    public static AddictionTreatmentFinder newInstance(Session session, AddictionUserData userData) {
+        AddictionTreatmentFinder treatementFinder = new AddictionTreatmentFinder();
+        treatementFinder.setSession(session);
+        treatementFinder.setUserData(userData);
+        return treatementFinder;
     }
 
-    protected void setSession(Session session) {
+    public void setSession(Session session) {
         this.session = session;
     }
 
-    protected Session getSession() {
+    public Session getSession() {
         return session;
     }
 
-    protected AddictionHelperData getGameData() {
-        return gameData;
+    public AddictionUserData getUserData() {
+        return userData;
     }
 
-    protected void setGameData(AddictionHelperData gameData) {
-        this.gameData = gameData;
+    public void setUserData(AddictionUserData gameData) {
+        this.userData = userData;
     }
 
-    /**
-     * Returns true if the game has any players, false otherwise.
-     * 
-     * @return true if the game has any players, false otherwise
-     */
-    public boolean hasPlayers() {
-        return !gameData.getPlayers().isEmpty();
+
+/*
+    public void addUser(String userName) {
+        userData.getPlayers().add(playerName);
     }
 
-    /**
-     * Returns the number of players in the game.
-     * 
-     * @return the number of players in the game
-     */
-    public int getNumberOfPlayers() {
-        return gameData.getPlayers().size();
-    }
 
-    /**
-     * Add a player to the game.
-     * 
-     * @param playerName
-     *            Name of the player
-     */
-    public void addPlayer(String playerName) {
-        gameData.getPlayers().add(playerName);
-    }
-
-    /**
-     * Returns true if the player exists in the game, false otherwise.
-     * 
-     * @param playerName
-     *            Name of the player
-     * @return true if the player exists in the game, false otherwise
-     */
-    public boolean hasPlayer(String playerName) {
-        return gameData.getPlayers().contains(playerName);
-    }
-
-    /**
-     * Returns true if the game has any scores listed, false otherwise.
-     * 
-     * @return true if the game has any scores listed, false otherwise
-     */
-    public boolean hasScores() {
-        return !gameData.getScores().isEmpty();
-    }
-
-    /**
-     * Returns the score for a player.
-     * 
-     * @param playerName
-     *            Name of the player
-     * @return score for a player
-     */
     public long getScoreForPlayer(String playerName) {
         return gameData.getScores().get(playerName);
     }
 
-    /**
-     * Adds the score passed to it to the current score for a player. Returns true if the player
-     * existed, false otherwise.
-     * 
-     * @param playerName
-     *            Name of the player
-     * @param score
-     *            score to be added
-     * @return true if the player existed, false otherwise.
-     */
     public boolean addScoreForPlayer(String playerName, long score) {
         if (!hasPlayer(playerName)) {
             return false;
@@ -136,22 +78,13 @@ public final class AddictionTreatmentFinder {
         return true;
     }
 
-    /**
-     * Resets the scores for all players to zero.
-     */
     public void resetScores() {
         for (String playerName : gameData.getPlayers()) {
             gameData.getScores().put(playerName, Long.valueOf(0L));
         }
     }
 
-    /**
-     * Returns a {@link SortedMap} of player names mapped to scores with the map sorted in
-     * decreasing order of scores.
-     * 
-     * @return a {@link SortedMap} of player names mapped to scores with the map sorted in
-     *         decreasing order of scores
-     */
+
     public SortedMap<String, Long> getAllScoresInDescndingOrder() {
 		Map<String, Long> scores = gameData.getScores();
 
@@ -167,12 +100,7 @@ public final class AddictionTreatmentFinder {
         return sortedScores;
     }
 
-    /**
-     * This comparator takes a map of player name and scores and uses that to sort a collection of
-     * player names in the descending order of their scores.
-     * <p>
-     * Note: this comparator imposes orderings that are inconsistent with equals.
-     */
+
     private static final class ScoreComparator implements Comparator<String>, Serializable {
         private static final long serialVersionUID = 7849926209990327190L;
         private final Map<String, Long> baseMap;
@@ -187,4 +115,6 @@ public final class AddictionTreatmentFinder {
             return longCompare != 0 ? longCompare : a.compareTo(b);
         }
     }
+*/
+
 }
