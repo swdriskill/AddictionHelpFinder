@@ -159,8 +159,11 @@ public class AddictionTreatmentFinderManager {
 
         log.debug("in getConnectIntentResponse 1 " + skillContext.getAddictionUserData().toString());
         treatmentFinder.setUserData(skillContext.getAddictionUserData());
-        
+
         log.debug("in getConnectIntentResponse 2 " + skillContext.getAddictionUserData().toString());
+        log.debug("in getConnectIntentResponse 3 " + treatmentFinder);
+        log.debug("in getConnectIntentResponse 4 " + treatmentFinder.getUserData());
+
         log.debug("About to save - " + treatmentFinder.getUserData().toString());
 
 

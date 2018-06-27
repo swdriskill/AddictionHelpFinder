@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="065bb9f5-695c-47d8-a58b-e77972b20728" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/speechAssets/SkillBuilder.json" afterPath="$PROJECT_DIR$/speechAssets/SkillBuilder.json" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionHelperData.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinder.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinder.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/skill.properties" afterPath="$PROJECT_DIR$/src/main/resources/skill.properties" />
-      <change beforePath="$PROJECT_DIR$/target/Addiction-Help-Finder-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/target/Addiction-Help-Finder-1.0-SNAPSHOT-jar-with-dependencies.jar" />
-      <change beforePath="$PROJECT_DIR$/target/Addiction-Help-Finder-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/Addiction-Help-Finder-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/skill/AddictionTreatmentFinderManager.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/skill/AddictionTreatmentFinderManager.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechlet.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/skill/AddictionTreatmentFinderSpeechlet.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionHelperData.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinder$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinder$ScoreComparator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinder.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinder.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderDao.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem$AddictionTreatmentFinderDataMarshaller$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem$AddictionTreatmentFinderDataMarshaller.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem$AddictionTreatmentFinderDataMarshaller.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/AddictionTreatmentFinderUserDataItem.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/utils/PropertyReader.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/utils/PropertyReader.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skill.properties" afterPath="$PROJECT_DIR$/target/classes/skill.properties" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,8 +18,8 @@
       <file leaf-file-name="AddictionTreatmentFinderManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="161" column="8" lean-forward="false" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+            <state relative-caret-position="484">
+              <caret line="164" column="84" lean-forward="false" selection-start-line="164" selection-start-column="84" selection-end-line="164" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -403,12 +379,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530046335225</updated>
-      <workItem from="1530046338123" duration="11691000" />
+      <workItem from="1530046338123" duration="11949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11691000" />
+    <option name="totallyTimeSpent" value="11949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="288" y="30" width="1304" height="947" extended-state="0" />
@@ -723,8 +699,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="161" column="8" lean-forward="false" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+        <state relative-caret-position="484">
+          <caret line="164" column="84" lean-forward="false" selection-start-line="164" selection-start-column="84" selection-end-line="164" selection-end-column="84" />
           <folding />
         </state>
       </provider>
