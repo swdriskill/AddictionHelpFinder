@@ -48,7 +48,7 @@ public class AddictionTreatmentFinderUserDataItem {
 
         @Override
         public String marshall(AddictionUserData userData) {
-            String data = userData.getfName() + ":" + userData.getLName() + ":" + userData.getAgeType() + ":" +
+            String data = userData.getfName() + ":" + userData.getAgeType() + ":" +
                     userData.getCity() + ":" + userData.getState()+ ":" + userData.getLgbt()+ ":" +
                     userData.getPhoneNumber() + ":" + userData.getPregnantOrSpecalizedCare() + ":" +
                     userData.getReligiousMedical()+ ":" + userData.getQuestionPhase();
@@ -61,16 +61,35 @@ public class AddictionTreatmentFinderUserDataItem {
         public AddictionUserData unmarshall(Class<AddictionUserData> clazz, String value) {
             String[] userDataArray = value.split(",");
             AddictionUserData userData = AddictionUserData.newInstance();
-            userData.setfName(userDataArray[0]);
-            userData.setLName(userDataArray[1]);
-            userData.setAgeType(userDataArray[2]);
-            userData.setCity(userDataArray[3]);
-            userData.setState(userDataArray[4]);
-            userData.setLgbt(userDataArray[5]);
-            userData.setPhoneNumber(userDataArray[6]);
-            userData.setPregnantOrSpecalizedCare(userDataArray[7]);
-            userData.setReligiousMedical(userDataArray[8]);
-            userData.setQuestionPhase(new Integer(userDataArray[9]).intValue());
+            String fName = userDataArray[0];
+            String ageType = userDataArray[1];
+            String cityType = userDataArray[2];
+            String stateType = userDataArray[3];
+            String lgbt = userDataArray[4];
+            String phone = userDataArray[5];
+            String pregnantOrSpecalizedCare = userDataArray[6];
+            String religiousMedical = userDataArray[7];
+            String questionPhase = userDataArray[8];
+
+            if (fName == null) { fName = ""; }
+            if (ageType == null) { ageType = ""; }
+            if (cityType == null) { cityType = ""; }
+            if (stateType == null) { stateType = ""; }
+            if (lgbt == null) { lgbt = ""; }
+            if (phone == null) { phone = ""; }
+            if (pregnantOrSpecalizedCare == null) { pregnantOrSpecalizedCare = ""; }
+            if (religiousMedical == null) { religiousMedical = ""; }
+            if (questionPhase == null) { questionPhase = "0"; }
+
+            userData.setfName(fName);
+            userData.setAgeType(ageType);
+            userData.setCity(cityType);
+            userData.setState(stateType);
+            userData.setLgbt(lgbt);
+            userData.setPhoneNumber(phone);
+            userData.setPregnantOrSpecalizedCare(pregnantOrSpecalizedCare);
+            userData.setReligiousMedical(religiousMedical);
+            userData.setQuestionPhase(new Integer(questionPhase).intValue());
 
             log.debug("in UnMarshal  - : " + userData.toString());
 

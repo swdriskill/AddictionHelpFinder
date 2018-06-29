@@ -2,7 +2,6 @@ package main.java.com.ATF.storage;
 
 public class AddictionUserData {
     String fName;
-    String LName;
     // 0 for starting the session, each question has a number. Once the answer to the queston is persisted, increment the questionPhase
     int questionPhase;
     //under18 or over18
@@ -35,10 +34,6 @@ public class AddictionUserData {
     public String getfName () { return fName; }
 
     public void setfName (String fName) { this.fName = fName; }
-
-    public String getLName () { return LName; }
-
-    public void setLName (String LName) { this.LName = LName; }
 
     public int getQuestionPhase () {
         return questionPhase;
@@ -106,7 +101,6 @@ public class AddictionUserData {
     public String toString () {
         return "AddictionUserData{" +
                 "fName='" + fName + '\'' +
-                ", LName='" + LName + '\'' +
                 ", questionPhase=" + questionPhase +
                 ", ageType='" + ageType + '\'' +
                 ", lgbt='" + lgbt + '\'' +

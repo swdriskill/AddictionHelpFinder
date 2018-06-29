@@ -9,6 +9,9 @@
  */
 package main.java.com.ATF.skill;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,6 +19,7 @@ import java.util.List;
  * Util containing various text related utils.
  */
 public final class AddictionTreatmentFinderTextUtil {
+    private static final Logger log = LoggerFactory.getLogger(AddictionTreatmentFinderTextUtil.class);
 
     private AddictionTreatmentFinderTextUtil () {
     }
@@ -25,19 +29,8 @@ public final class AddictionTreatmentFinderTextUtil {
      */
     private static final List<String> NAME_BLACKLIST = Arrays.asList("player", "players");
 
-    /**
-     * Text of complete help.
-     */
-    public static final String COMPLETE_HELP =
-            "Here's some things you can say. Add John, give John 5 points, tell me the score, "
-                    + "new game, reset, and exit.";
 
     /**
-     * Text of next help.
-     */
-    public static final String NEXT_HELP = "You can give a player points, add a player, get the "
-            + "current score, or say help. What would you like?";
-
     /**
      * Cleans up the player name, and sanitizes it against the blacklist.
      *
@@ -45,6 +38,7 @@ public final class AddictionTreatmentFinderTextUtil {
      * @return
      */
     public static String getUserName (String recognizedUserName) {
+        log.debug("Complete name provided is : " + recognizedUserName);
         if (recognizedUserName == null || recognizedUserName.isEmpty()) {
             return null;
         }
@@ -56,6 +50,7 @@ public final class AddictionTreatmentFinderTextUtil {
         } else {
             cleanedName = recognizedUserName;
         }
+        log.debug("Cleaned name sent back by the util is : " + cleanedName);
 
         // if the name is on our blacklist, it must be mis-recognition
         if (NAME_BLACKLIST.contains(cleanedName)) {

@@ -21,22 +21,16 @@ public class PropertyReader {
     private String speechReprompt= "";
     private String speechSorry = "";
     private String speechConnect = "";
-    private String questionname = "";
     private String speechNo = "";
     private String question0 = "";
     private String question1 = "";
-    private String question2under = "";
-    private String question3underCityState = "";
-    private String questionunderphonecall = "";
-    private String questionunderphonetext = "";
-
-    private String question2over = "";
-    private String question2overlgbt = "";
-    private String question2overlgbtConnect = "";
-
-    private String question3over = "";
-
-    private String question4over = "";
+    private String question2 = "";
+    private String question3 = "";
+    private String question4 = "";
+    private String question5 = "";
+    private String question6 = "";
+    private String question7 = "";
+    private String question8 = "";
 
 
     private String skillId = "";
@@ -63,20 +57,13 @@ public class PropertyReader {
             speechNo = skillProperties.getProperty("speech-no");
             question0 = skillProperties.getProperty("question-0");
             question1 = skillProperties.getProperty("question-1");
-            question2under = skillProperties.getProperty("question-2-Under");
-            question3underCityState = skillProperties.getProperty("question-3-Under-city-state");
-            questionunderphonecall = skillProperties.getProperty("question-Under-phone-call");
-            questionunderphonetext = skillProperties.getProperty("question-Under-phone-text");
-
-            question2over = skillProperties.getProperty("question-2-Over");
-            question2overlgbt = skillProperties.getProperty("question-2-Over-LGBT");
-            question2overlgbtConnect = skillProperties.getProperty("question-2-Over-LGBT-Connect");
-            questionname = skillProperties.getProperty("question-name");
-
-
-            question3over = skillProperties.getProperty("question-3-Over");
-
-            question4over = skillProperties.getProperty("question-4-Over");
+            question2 = skillProperties.getProperty("question-2");
+            question3 = skillProperties.getProperty("question-3");
+            question4 = skillProperties.getProperty("question-4");
+            question5 = skillProperties.getProperty("question-5");
+            question6 = skillProperties.getProperty("question-6");
+            question7 = skillProperties.getProperty("question-7");
+            question8 = skillProperties.getProperty("question-8");
 
             log.debug("Coming from LOG 4 J - The skill name is :- " + skillName);
 
@@ -143,44 +130,32 @@ public class PropertyReader {
         return speechConnect;
     }
 
-    public String getQuestion2under () {
-        return question2under;
+    public String getQuestion2 () {
+        return question2;
     }
 
-    public String getQuestion2over () {
-        return question2over;
+    public String getQuestion3 () {
+        return question3;
     }
 
-    public String getQuestion2overlgbt () {
-        return question2overlgbt;
+    public String getQuestion4 () {
+        return question4;
     }
 
-    public String getQuestion3over () {
-        return question3over;
+    public String getQuestion5 () {
+        return question5;
     }
 
-    public String getQuestion4over () {
-        return question4over;
+    public String getQuestion6 () {
+        return question6;
     }
 
-    public String getQuestionname () {
-        return questionname;
+    public String getQuestion7 () {
+        return question7;
     }
 
-    public String getQuestion3underCityState () {
-        return question3underCityState;
-    }
-
-    public String getQuestion2overlgbtConnect () {
-        return question2overlgbtConnect;
-    }
-
-    public String getQuestionunderphonecall () {
-        return questionunderphonecall;
-    }
-
-    public String getQuestionunderphonetext () {
-        return questionunderphonetext;
+    public String getQuestion8 () {
+        return question8;
     }
 
     public static PropertyReader getPropertyReader () {

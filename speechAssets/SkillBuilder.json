@@ -12,33 +12,8 @@
             }
           ],
           "samples": [
-            "add player {UserName}",
-            "add {UserName}",
-            "add {UserName} to the game",
-            "add player {UserName} to the game",
-            "{UserName}"
-          ]
-        },
-        {
-          "name": "AddScoreIntent",
-          "slots": [
-            {
-              "name": "UserName",
-              "type": "LIST_OF_USER_NAMES"
-            },
-            {
-              "name": "ScoreNumber",
-              "type": "AMAZON.NUMBER"
-            }
-          ],
-          "samples": [
-            "give {UserName} {ScoreNumber}",
-            "give {UserName} {ScoreNumber} points",
-            "{ScoreNumber} more for {UserName}",
-            "{ScoreNumber} for {UserName}",
-            "give {UserName} {ScoreNumber} more points",
-            "{ScoreNumber} more points for {UserName}",
-            "{ScoreNumber} points for {UserName}"
+            "my name is {UserName}",
+            "call me {UserName}"
           ]
         },
         {
@@ -59,9 +34,10 @@
           ]
         },
         {
-          "name": "NewUserIntent",
+          "name": "StartInteractionIntent",
           "slots": [],
           "samples": [
+            "Yep",
             "yes"
           ]
         },
@@ -75,14 +51,6 @@
           ],
           "samples": [
             "{UserAge}"
-          ]
-        },
-        {
-          "name": "ResetPlayersIntent",
-          "slots": [],
-          "samples": [
-            "clear",
-            "clear a game"
           ]
         },
         {
@@ -121,10 +89,16 @@
           ]
         },
         {
-          "name": "LgbtGoBackIntent",
-          "slots": [],
+          "name": "ReligiousMedicalChoiceIntent",
+          "slots": [
+            {
+              "name": "ReligiousMedicalChoice",
+              "type": "LIST_OF_ReligiousMedicalChoices"
+            }
+          ],
           "samples": [
-            "go back"
+            "{ReligiousMedicalChoice}",
+            "I prefer {ReligiousMedicalChoice}"
           ]
         }
       ],
@@ -195,6 +169,21 @@
             {
               "name": {
                 "value": "Washington"
+              }
+            }
+          ]
+        },
+        {
+          "name": "LIST_OF_ReligiousMedicalChoices",
+          "values": [
+            {
+              "name": {
+                "value": "medically assisted"
+              }
+            },
+            {
+              "name": {
+                "value": "twelve step"
               }
             }
           ]

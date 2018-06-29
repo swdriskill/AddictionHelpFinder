@@ -49,8 +49,8 @@ public final class AddictionTreatmentFinder {
         return userData;
     }
 
-    public void setUserData(AddictionUserData gameData) {
-        this.userData = userData;
+    public void setUserData(AddictionUserData lUserData) {
+        this.userData = lUserData;
     }
 
 

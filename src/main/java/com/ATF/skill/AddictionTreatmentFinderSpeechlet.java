@@ -13,7 +13,6 @@ import com.amazon.speech.json.SpeechletRequestEnvelope;
 import com.amazon.speech.slu.Intent;
 import com.amazon.speech.speechlet.*;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
-import main.java.com.ATF.storage.AddictionUserData;
 import main.java.com.ATF.utils.PropertyReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -107,9 +106,10 @@ public class AddictionTreatmentFinderSpeechlet implements SpeechletV2 {
         Intent intent = request.getIntent();
         log.debug("STARTING to execute for intent name = : " + intent.getName());
 
-        if ("NewUserIntent".equals(intent.getName())) {
-            log.debug("inside the NewGameIntent");
-            return addictionTreatmentFinderManager.getNewUserIntentResponse(intent, session, skillContext);
+        if ("StartInteractionIntent".equals(intent.getName())) {
+            log.debug("inside the " + intent.getName());
+
+            return addictionTreatmentFinderManager.getStartInteractionIntentResponse(intent, session, skillContext);
         } else if ("AddUserIntent".equals(intent.getName())) {
             log.debug("inside the " + intent.getName());
 
@@ -118,16 +118,10 @@ public class AddictionTreatmentFinderSpeechlet implements SpeechletV2 {
             log.debug("inside the " + intent.getName());
 
             return addictionTreatmentFinderManager.getUserAgeIntentResponse(intent, session, skillContext);
-        } else if ("AddScoreIntent".equals(intent.getName())) {
+        } else if ("ReligiousMedicalChoiceIntent".equals(intent.getName())) {
             log.debug("inside the " + intent.getName());
 
-            return addictionTreatmentFinderManager.getAddScoreIntentResponse(intent, session, skillContext);
-
-        } else if ("ResetPlayersIntent".equals(intent.getName())) {
-            log.debug("inside the " + intent.getName());
-
-            return addictionTreatmentFinderManager.getResetPlayersIntentResponse(intent, session);
-
+            return addictionTreatmentFinderManager.getReligiousMedicalChoiceIntentResponse(intent, session, skillContext);
         } else if ("AMAZON.HelpIntent".equals(intent.getName())) {
             log.debug("inside the " + intent.getName());
 
@@ -143,22 +137,10 @@ public class AddictionTreatmentFinderSpeechlet implements SpeechletV2 {
 
             return addictionTreatmentFinderManager.getExitIntentResponse(intent, session, skillContext);
 
-        } else if ("SearchProviderIntent".equals(intent.getName())) {
-            log.debug("inside the " + intent.getName());
-
-            return addictionTreatmentFinderManager.getCityStateIntentResponse(intent, session, skillContext);
-        } else if ("CaptureCityStateIntent".equals(intent.getName())) {
-            log.debug("inside the " + intent.getName());
-
-            return addictionTreatmentFinderManager.getCaptureCityStateIntentResponse(intent, session, skillContext);
         } else if ("ConnectCallIntent".equals(intent.getName())) {
             log.debug("inside the " + intent.getName());
 
             return addictionTreatmentFinderManager.getConnectIntentResponse(intent, session, skillContext);
-        } else if ("LgbtGoBackIntent".equals(intent.getName())) {
-            log.debug("inside the " + intent.getName());
-
-            return addictionTreatmentFinderManager.getLgbtGoBackIntentResponse(intent, session, skillContext);
         } else {
             throw new IllegalArgumentException("Unrecognized intent: " + intent.getName());
         }
