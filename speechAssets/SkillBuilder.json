@@ -12,8 +12,7 @@
             }
           ],
           "samples": [
-            "my name is {UserName}",
-            "call me {UserName}"
+            "my name is {UserName}"
           ]
         },
         {
@@ -110,8 +109,8 @@
             }
           ],
           "samples": [
-            "My number is {pnumber}",
-            "{pnumber}"
+            "Text me at {pnumber}",
+            "Call me at {pnumber}"
           ]
         }
       ],

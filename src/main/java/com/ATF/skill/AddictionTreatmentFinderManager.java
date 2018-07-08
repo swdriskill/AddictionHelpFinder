@@ -45,6 +45,7 @@ public class AddictionTreatmentFinderManager {
     private static final String SLOT_USER_CITY = "City";
     private static final String SLOT_USER_STATE = "State";
     private static final String SLOT_USER_MEDICAL_RELIGIOUS_CHOICE = "ReligiousMedicalChoice";
+    private static final String SLOT_PHONE_NUMBER = "pnumber";
 
 
     /**
@@ -265,6 +266,50 @@ public class AddictionTreatmentFinderManager {
         session.setAttribute("SESSION-STEP", new Integer(addictionUserData.getQuestionPhase()));
         session.setAttribute("SESSION-USER-MEDICAL-CHOICE", addictionUserData.getReligiousMedical());
 
+        return getAskSpeechletResponse(addictionUserData.getfName()+", " + propertyReader.getQuestion8(), propertyReader.getQuestion8());
+
+    }
+
+    public SpeechletResponse getCapturePhoneIntentResponse (Intent intent, Session session,
+                                                       SkillContext skillContext) {
+        Integer stepInSession = (Integer) session.getAttribute("SESSION-STEP");
+        AddictionUserData addictionUserData = skillContext.getAddictionUserData();
+
+        log.debug("getCapturePhoneIntentResponse STEP in Session - " + stepInSession.intValue());
+
+        if (stepInSession == null) {
+            return getAskSpeechletResponse(propertyReader.getWelcomeMessage(), propertyReader.getSpeechReprompt());
+        }
+        int iStepInSession = stepInSession.intValue();
+
+
+        // add a player to the current game,
+        // terminate or continue the conversation based on whether the intent
+        // is from a one shot command or not.
+        String phoneNumber = intent.getSlot(SLOT_PHONE_NUMBER).getValue();
+
+        if (phoneNumber == null) {
+            String speechText = "Sorry, I did not hear that" + propertyReader.getQuestion8();
+            return getAskSpeechletResponse(speechText, speechText);
+        }
+
+        String userName = addictionUserData.getfName();
+        log.debug("in getCapturePhoneIntentResponse phoneNumber inputted is - " + phoneNumber);
+        if (phoneNumber == null) {
+            return getAskSpeechletResponse(userName+", " + propertyReader.getQuestion8(), propertyReader.getQuestion8());
+        }
+        addictionUserData.setPhoneNumber(phoneNumber);
+
+        log.debug("In getCapturePhoneIntentResponse Logging Addiction contents - : " + addictionUserData.toString());
+
+        addictionUserData.setQuestionPhase(iStepInSession+1); //set the state of the next question
+
+        log.debug("In getCapturePhoneIntentResponse addiction data - " + addictionUserData.getAgeType());
+        skillContext.setAddictionUserData(addictionUserData);
+        session.setAttribute("SESSION-STEP", new Integer(addictionUserData.getQuestionPhase()));
+        session.setAttribute("SESSION-USER-AGE", addictionUserData.getAgeType());
+        session.setAttribute("SESSION-USER-PHONE", addictionUserData.getPhoneNumber());
+
         String sessionNationalFacility = (String) session.getAttribute("SESSION-NATIONAL-FACILITY");
         String prompt = null;
         if (sessionNationalFacility != null && sessionNationalFacility.equalsIgnoreCase("yes")) {
@@ -280,9 +325,7 @@ public class AddictionTreatmentFinderManager {
         // if the session does not have SESSION-NATIONAL-FACILITY, load Q7, Q9
 
         // Q6 and Q9 will land the user at ConnectCallIntent and SearchCallIntent
-
-        return getAskSpeechletResponse(addictionUserData.getfName()+", " + prompt, prompt);
-
+        return getAskSpeechletResponse(userName+", " + prompt, prompt);
     }
 
 

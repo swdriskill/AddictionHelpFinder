@@ -152,6 +152,10 @@ public class AddictionTreatmentFinderSpeechlet implements SpeechletV2 {
             log.debug("inside the " + intent.getName());
 
             return addictionTreatmentFinderManager.getSearchIntentResponse(intent, session, skillContext);
+        } else if ("CapturePhoneIntent".equals(intent.getName())) {
+            log.debug("inside the " + intent.getName());
+
+            return addictionTreatmentFinderManager.getCapturePhoneIntentResponse(intent, session, skillContext);
         } else {
             throw new IllegalArgumentException("Unrecognized intent: " + intent.getName());
         }
