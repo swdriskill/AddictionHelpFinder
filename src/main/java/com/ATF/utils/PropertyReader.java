@@ -31,6 +31,8 @@ public class PropertyReader {
     private String question6 = "";
     private String question7 = "";
     private String question8 = "";
+    private String question9 = "";
+    private String nationalFacilityNumber = "";
 
 
     private String skillId = "";
@@ -64,6 +66,9 @@ public class PropertyReader {
             question6 = skillProperties.getProperty("question-6");
             question7 = skillProperties.getProperty("question-7");
             question8 = skillProperties.getProperty("question-8");
+            question9 = skillProperties.getProperty("question-9");
+
+            nationalFacilityNumber = skillProperties.getProperty("national-facility-number");
 
             log.debug("Coming from LOG 4 J - The skill name is :- " + skillName);
 
@@ -156,6 +161,14 @@ public class PropertyReader {
 
     public String getQuestion8 () {
         return question8;
+    }
+
+    public String getQuestion9 () {
+        return question9;
+    }
+
+    public String getNationalFacilityNumber () {
+        return nationalFacilityNumber;
     }
 
     public static PropertyReader getPropertyReader () {

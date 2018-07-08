@@ -100,6 +100,19 @@
             "{ReligiousMedicalChoice}",
             "I prefer {ReligiousMedicalChoice}"
           ]
+        },
+        {
+          "name": "CapturePhoneIntent",
+          "slots": [
+            {
+              "name": "pnumber",
+              "type": "AMAZON.PhoneNumber"
+            }
+          ],
+          "samples": [
+            "My number is {pnumber}",
+            "{pnumber}"
+          ]
         }
       ],
       "types": [

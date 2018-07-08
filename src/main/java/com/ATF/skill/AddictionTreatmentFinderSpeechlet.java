@@ -134,6 +134,13 @@ public class AddictionTreatmentFinderSpeechlet implements SpeechletV2 {
 
         } else if ("AMAZON.StopIntent".equals(intent.getName())) {
             log.debug("inside the " + intent.getName());
+            String isFalseNo = (String) session.getAttribute("SESSION-NO-DONT-EXIT");
+
+            if (isFalseNo.equalsIgnoreCase("yes")) {
+                session.removeAttribute("SESSION-NO-DONT-EXIT");
+                //todo
+                log.debug("Landed in the stor intent in case of a false no");
+            }
 
             return addictionTreatmentFinderManager.getExitIntentResponse(intent, session, skillContext);
 
@@ -141,6 +148,10 @@ public class AddictionTreatmentFinderSpeechlet implements SpeechletV2 {
             log.debug("inside the " + intent.getName());
 
             return addictionTreatmentFinderManager.getConnectIntentResponse(intent, session, skillContext);
+        } else if ("SearchProviderIntent".equals(intent.getName())) {
+            log.debug("inside the " + intent.getName());
+
+            return addictionTreatmentFinderManager.getSearchIntentResponse(intent, session, skillContext);
         } else {
             throw new IllegalArgumentException("Unrecognized intent: " + intent.getName());
         }

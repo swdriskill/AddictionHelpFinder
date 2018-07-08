@@ -94,6 +94,32 @@ public class AddictionTreatmentFinderManager {
         return getAskSpeechletResponse(propertyReader.getSpeechConnect(), propertyReader.getSpeechReprompt());
     }
 
+    public SpeechletResponse getSearchIntentResponse (Intent intent, Session session, SkillContext skillContext) {
+        log.debug("In getConnectIntentResponse");
+
+        // Load the previous game
+        AddictionTreatmentFinder treatmentFinder = addictionTreatmentFinderDao.getUserData(session);
+
+        if (treatmentFinder == null) {
+            treatmentFinder = AddictionTreatmentFinder.newInstance(session, skillContext.getAddictionUserData());
+        }
+
+        log.debug("in getSearchIntentResponse 1 " + skillContext.getAddictionUserData().toString());
+        treatmentFinder.setUserData(skillContext.getAddictionUserData());
+
+        log.debug("in getSearchIntentResponse 2 " + skillContext.getAddictionUserData().toString());
+        log.debug("in getSearchIntentResponse 3 " + treatmentFinder);
+        log.debug("in getSearchIntentResponse 4 " + treatmentFinder.getUserData());
+
+        // Save the user data
+        addictionTreatmentFinderDao.setUserData(treatmentFinder);
+
+        // Search in the DDB
+        log.debug("About to Search for - " + treatmentFinder.getUserData().toString());
+
+
+        return getAskSpeechletResponse(propertyReader.getSpeechConnect(), propertyReader.getSpeechReprompt());
+    }
 
 
     /**
@@ -179,55 +205,32 @@ public class AddictionTreatmentFinderManager {
         } else if (iStepInSession == 4) {
             addictionUserData = skillContext.getAddictionUserData();
 
-//            String yesNoResponse = intent.getSlot(SLOT_USER_RESPONSE).getValue();
-//            Iterator keys = intent.getSlots().keySet().iterator();
-//            while (keys.hasNext()) {
-//                log.debug("Yahoo" + (String) keys.next());
-//
-//            }
-//
-//            if (yesNoResponse == null) {
-//                String speechText = "Sorry, I did not hear that. " + propertyReader.getQuestion3();
-//                return getAskSpeechletResponse(speechText, speechText);
-//            }
             addictionUserData.setLgbt("yes");
             addictionUserData.setQuestionPhase(iStepInSession + 1); //set the state of the next question
             session.setAttribute("SESSION-STEP", new Integer(addictionUserData.getQuestionPhase()));
             session.setAttribute("SESSION-USER-LGBT", addictionUserData.getLgbt());
             log.debug("In 4 Addiction data - " + addictionUserData.toString());
+            session.setAttribute("SESSION-NATIONAL-FACILITY", "yes");
+            session.setAttribute("SESSION-NO-DONT-EXIT", "yes");
 
             skillContext.setAddictionUserData(addictionUserData);
             return getAskSpeechletResponse(addictionUserData.getfName() +", " + propertyReader.getQuestion4(), propertyReader.getQuestion4());
         } else if (iStepInSession == 5) {
             addictionUserData = skillContext.getAddictionUserData();
 
-//            String yesNoResponse = intent.getSlot(SLOT_USER_RESPONSE).getValue();
-//
-//            if (yesNoResponse == null) {
-//                String speechText = "Sorry, I did not hear that" + propertyReader.getQuestion4();
-//                return getAskSpeechletResponse(speechText, speechText);
-//            }
             addictionUserData.setPregnantOrSpecalizedCare("yes");
             addictionUserData.setQuestionPhase(iStepInSession + 1); //set the state of the next question
             session.setAttribute("SESSION-STEP", new Integer(addictionUserData.getQuestionPhase()));
             session.setAttribute("SESSION-USER-MEDICAL-ASSISTANCE", addictionUserData.getPregnantOrSpecalizedCare());
             log.debug("In 5 Addiction data - " + addictionUserData.toString());
+            session.setAttribute("SESSION-NATIONAL-FACILITY", "yes");
+            session.setAttribute("SESSION-NO-DONT-EXIT", "yes");
 
             skillContext.setAddictionUserData(addictionUserData);
             return getAskSpeechletResponse(addictionUserData.getfName() +", " + propertyReader.getQuestion5(), propertyReader.getQuestion5());
         } else if (iStepInSession == 6) {
             // ToDO
-            String userAge = (String) session.getAttribute("SESSION-USER_AGE");
-            addictionUserData = AddictionUserData.newInstance();
-            addictionUserData.setAgeType(userAge);
-            addictionUserData.setQuestionPhase(iStepInSession+1); //set the state of the next question
-            addictionUserData.setLgbt("lgbt");
 
-            log.debug("In 1 Addiction data - " + addictionUserData.toString());
-            skillContext.setAddictionUserData(addictionUserData);
-            session.setAttribute("SESSION-USER_AGE", addictionUserData.getAgeType());
-            session.setAttribute("SESSION-STEP", new Integer(addictionUserData.getQuestionPhase()));
-            session.setAttribute("SESSION-LGBT", addictionUserData.getLgbt());
             return getAskSpeechletResponse("I am here", "I am here");
         } else {
             return getTellSpeechletResponse(propertyReader.getFatalError());
@@ -260,9 +263,25 @@ public class AddictionTreatmentFinderManager {
 
         skillContext.setAddictionUserData(addictionUserData);
         session.setAttribute("SESSION-STEP", new Integer(addictionUserData.getQuestionPhase()));
-        session.setAttribute("SESSION-USER_MEDICAL_CHOICE", addictionUserData.getReligiousMedical());
+        session.setAttribute("SESSION-USER-MEDICAL-CHOICE", addictionUserData.getReligiousMedical());
 
-        return getAskSpeechletResponse(addictionUserData.getfName()+", " + propertyReader.getQuestion6(), propertyReader.getQuestion6());
+        String sessionNationalFacility = (String) session.getAttribute("SESSION-NATIONAL-FACILITY");
+        String prompt = null;
+        if (sessionNationalFacility != null && sessionNationalFacility.equalsIgnoreCase("yes")) {
+            prompt = propertyReader.getQuestion6();
+        } else {
+            prompt = propertyReader.getQuestion7();
+        }
+//        kjgfhgckjhhfjh
+        // Get number (08)
+
+        // If the session has "SESSION-NATIONAL-FACILITY" load Q6 and in connect/search send them SESSION-NATIONAL-FACILITY number
+
+        // if the session does not have SESSION-NATIONAL-FACILITY, load Q7, Q9
+
+        // Q6 and Q9 will land the user at ConnectCallIntent and SearchCallIntent
+
+        return getAskSpeechletResponse(addictionUserData.getfName()+", " + prompt, prompt);
 
     }
 
@@ -304,7 +323,10 @@ public class AddictionTreatmentFinderManager {
         log.debug("In getUserAgeIntentResponse addiction data - " + addictionUserData.getAgeType());
         skillContext.setAddictionUserData(addictionUserData);
         session.setAttribute("SESSION-STEP", new Integer(addictionUserData.getQuestionPhase()));
-        session.setAttribute("SESSION-USER_AGE", addictionUserData.getAgeType());
+        session.setAttribute("SESSION-USER-AGE", addictionUserData.getAgeType());
+        if (userAge.equalsIgnoreCase("Under 18")) {
+            session.setAttribute("SESSION-NATIONAL-FACILITY", "yes");
+        }
 
         return getAskSpeechletResponse(newUserName+", " + propertyReader.getQuestion3(), propertyReader.getQuestion3());
     }
@@ -386,7 +408,7 @@ public class AddictionTreatmentFinderManager {
     public SpeechletResponse getExitIntentResponse(Intent intent, Session session,
                                                    SkillContext skillContext) {
         session.setAttribute("SESSION-STEP", new Integer(0));
-        session.setAttribute("USER-ADDICTION-DATA", AddictionUserData.newInstance());
+        skillContext.setAddictionUserData(AddictionUserData.newInstance());
 
         return skillContext.needsMoreHelp() ? getTellSpeechletResponse(propertyReader.getGoodBye())
                 : getTellSpeechletResponse("");
