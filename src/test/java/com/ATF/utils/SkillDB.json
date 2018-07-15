@@ -1,0 +1,126 @@
+{
+  "AddictionCenters": [
+    {
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "1"
+          },
+          "Name": {
+            "S": "Peggy Albrecht Friendly House"
+          },
+          "Street1": {
+            "S": "347 South Normandie Avenue"
+          },
+          "Street2": {
+            "S": ""
+          },
+          "City": {
+            "S": "Los Angeles"
+          },
+          "State": {
+            "S": "CA"
+          },
+          "Zip": {
+            "S": "90020"
+          },
+          "County": {
+            "S": "Los Angeles"
+          },
+          "Phone": {
+            "S": "213-389-9964"
+          },
+          "LGBT": {
+            "N": "0"
+          },
+          "Alcohol Detox": {
+            "N": "0"
+          },
+          "Children/adolescents": {
+            "N": "0"
+          }
+        }
+      },
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "2"
+          },
+          "Name": {
+            "S": "Peggy Albrecht Friendly House no 2"
+          },
+          "Street1": {
+            "S": "346 South Normandie Avenue"
+          },
+          "Street2": {
+            "S": ""
+          },
+          "City": {
+            "S": "Los Angeles"
+          },
+          "State": {
+            "S": "CA"
+          },
+          "Zip": {
+            "S": "90021"
+          },
+          "County": {
+            "S": "Los Angeles"
+          },
+          "Phone": {
+            "S": "313-389-9964"
+          },
+          "LGBT": {
+            "N": "0"
+          },
+          "Alcohol Detox": {
+            "N": "0"
+          },
+          "Children/adolescents": {
+            "N": "0"
+          }
+        }
+      },
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "3"
+          },
+          "Name": {
+            "S": "Peggy Albrecht Friendly House no 3"
+          },
+          "Street1": {
+            "S": "346 South Normandie Avenue"
+          },
+          "Street2": {
+            "S": ""
+          },
+          "City": {
+            "S": "Malibu"
+          },
+          "State": {
+            "S": "CA"
+          },
+          "Zip": {
+            "S": "90021"
+          },
+          "County": {
+            "S": "Los Angeles"
+          },
+          "Phone": {
+            "S": "513-389-9964"
+          },
+          "LGBT": {
+            "N": "0"
+          },
+          "Alcohol Detox": {
+            "N": "0"
+          },
+          "Children/adolescents": {
+            "N": "0"
+          }
+        }
+      }
+    }
+  ]
+}
