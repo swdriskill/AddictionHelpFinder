@@ -56,7 +56,7 @@
           "name": "ConnectCallIntent",
           "slots": [],
           "samples": [
-            "Connect the call",
+            "connect me",
             "Connect"
           ]
         },
@@ -104,13 +104,12 @@
           "name": "CapturePhoneIntent",
           "slots": [
             {
-              "name": "pnumber",
+              "name": "PhoneNo",
               "type": "AMAZON.PhoneNumber"
             }
           ],
           "samples": [
-            "Text me at {pnumber}",
-            "Call me at {pnumber}"
+            "My number is {PhoneNo}"
           ]
         }
       ],

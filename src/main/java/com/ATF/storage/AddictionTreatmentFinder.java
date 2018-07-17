@@ -15,6 +15,7 @@ public final class AddictionTreatmentFinder {
     private Session session;
     private AddictionUserData userData;
 
+
     private AddictionTreatmentFinder () {
     }
 
@@ -37,6 +38,7 @@ public final class AddictionTreatmentFinder {
         return treatementFinder;
     }
 
+
     public void setSession(Session session) {
         this.session = session;
     }
@@ -52,7 +54,6 @@ public final class AddictionTreatmentFinder {
     public void setUserData(AddictionUserData lUserData) {
         this.userData = lUserData;
     }
-
 
 /*
     public void addUser(String userName) {

@@ -26,7 +26,9 @@ public class AddictionTreatmentFinderDao {
      */
     public AddictionTreatmentFinder getUserData (Session session) {
         AddictionTreatmentFinderUserDataItem item = new AddictionTreatmentFinderUserDataItem();
-        item.setCustomerId(session.getUser().getUserId());
+        String userPhone = (String) session.getAttribute("SESSION-USER-PHONE");
+        String userName = (String) session.getAttribute("SESSION-USER-NAME");
+        item.setCustomerId(userPhone+":"+userName);
 
         item = dynamoDbClient.loadItem(item);
 
@@ -42,9 +44,13 @@ public class AddictionTreatmentFinderDao {
      * 
      * @param treatmentFinder
      */
-    public void setUserData(AddictionTreatmentFinder treatmentFinder) {
+    public void setUserData(AddictionTreatmentFinder treatmentFinder, Session session) {
         AddictionTreatmentFinderUserDataItem item = new AddictionTreatmentFinderUserDataItem();
-        item.setCustomerId(treatmentFinder.getSession().getUser().getUserId());
+        String userPhone = (String) session.getAttribute("SESSION-USER-PHONE");
+        String userName = (String) session.getAttribute("SESSION-USER-NAME");
+        item.setCustomerId(userPhone+":"+userName);
+
+        //item.setCustomerId(treatmentFinder.getSession().getUser().getUserId());
         item.setUserData(treatmentFinder.getUserData());
 
         log.debug("In setUserData  + " + item.getCustomerId());
