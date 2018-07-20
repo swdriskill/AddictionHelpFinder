@@ -33,6 +33,11 @@ public class PropertyReader {
     private String question8 = "";
     private String question9 = "";
     private String nationalFacilityNumber = "";
+    private String twilioAuthToken = "";
+    private String twilioAccountSid = "";
+    private String twilioNumber = "";
+    private String textMessageContent = "";
+    private String alcoholCentersTable = "";
 
 
     private String skillId = "";
@@ -69,6 +74,13 @@ public class PropertyReader {
             question9 = skillProperties.getProperty("question-9");
 
             nationalFacilityNumber = skillProperties.getProperty("national-facility-number");
+            twilioAuthToken = skillProperties.getProperty("TWILIO_AUTH_TOKEN");
+            twilioAccountSid = skillProperties.getProperty("TWILIO_ACCOUNT_SID");
+            twilioNumber = skillProperties.getProperty("TWILIO_NUMBER");
+            textMessageContent = skillProperties.getProperty("TEXT_MESSAGE_BODY");
+
+            alcoholCentersTable = skillProperties.getProperty("Alcohol-Centers-Table");
+
 
             log.debug("Coming from LOG 4 J - The skill name is :- " + skillName);
 
@@ -171,6 +183,10 @@ public class PropertyReader {
         return nationalFacilityNumber;
     }
 
+    public String getAlcoholCentersTable () {
+        return alcoholCentersTable;
+    }
+
     public static PropertyReader getPropertyReader () {
         if (propertyReader == null) {
             propertyReader = new PropertyReader();
@@ -178,4 +194,19 @@ public class PropertyReader {
         return propertyReader;
     }
 
+    public String getTextMessageContent () {
+        return textMessageContent;
+    }
+
+    public String getTwilioAuthToken () {
+        return twilioAuthToken;
+    }
+
+    public String getTwilioAccountSid () {
+        return twilioAccountSid;
+    }
+
+    public String getTwilioNumber () {
+        return twilioNumber;
+    }
 }
