@@ -64,11 +64,12 @@ public class AddictionCentersFinderDao {
         return AddictionCenterFinder.newInstance(session, item.getAddictionCentersData());
     }
 
-    public List<AddictionCentersData> scanCityState(Session session, String tableName) {
+    public ScanResult scanCityState(Session session, String tableName) {
         // Scan for centers in city and state
         String city = (String) session.getAttribute("SESSION-CITY");
         String state = (String) session.getAttribute("SESSION-STATE");
         String scanKey = city+":"+state+":";
+        scanKey = scanKey.toUpperCase();
         log.debug("Scan Key: " + scanKey);
 
         HashMap<String, Condition> scanFilter = new HashMap<String, Condition>();
@@ -83,12 +84,7 @@ public class AddictionCentersFinderDao {
 
         ScanResult scanResult = dynamoDbClient.getDynamoDBClient().scan(scanRequest);
 
-        log.debug("Scan Result: " + scanResult);
-        log.debug("Scan Result: " + scanResult.getItems());
-        log.debug("Scan Result: " + scanResult.getItems().get(0));
-
-        //todo implement scan functionality
-        return new ArrayList<>();
+        return scanResult;
     }
 
     /**
@@ -102,7 +98,7 @@ public class AddictionCentersFinderDao {
         String city = (String) session.getAttribute("SESSION-CITY");
         String state = (String) session.getAttribute("SESSION-STATE");
         double random = Math.random();
-        item.setId(city+":"+state+":"+random+"");
+        item.setId(city.toUpperCase()+":"+state.toUpperCase()+":"+random+"");
 
         //item.setCustomerId(treatmentFinder.getSession().getUser().getUserId());
         item.setAddictionCentersData(addictionCenterFinder.getAddictionCentersData());

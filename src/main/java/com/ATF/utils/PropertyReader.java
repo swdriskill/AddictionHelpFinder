@@ -36,6 +36,7 @@ public class PropertyReader {
     private String twilioAuthToken = "";
     private String twilioAccountSid = "";
     private String twilioNumber = "";
+    private String nationalFacilityTextMessageContent = "";
     private String textMessageContent = "";
     private String alcoholCentersTable = "";
 
@@ -77,6 +78,7 @@ public class PropertyReader {
             twilioAuthToken = skillProperties.getProperty("TWILIO_AUTH_TOKEN");
             twilioAccountSid = skillProperties.getProperty("TWILIO_ACCOUNT_SID");
             twilioNumber = skillProperties.getProperty("TWILIO_NUMBER");
+            nationalFacilityTextMessageContent = skillProperties.getProperty("NATIONAL_FACILITY_TEXT_MESSAGE_BODY");
             textMessageContent = skillProperties.getProperty("TEXT_MESSAGE_BODY");
 
             alcoholCentersTable = skillProperties.getProperty("Alcohol-Centers-Table");
@@ -194,8 +196,8 @@ public class PropertyReader {
         return propertyReader;
     }
 
-    public String getTextMessageContent () {
-        return textMessageContent;
+    public String getNationalFacilityTextMessageContent () {
+        return nationalFacilityTextMessageContent;
     }
 
     public String getTwilioAuthToken () {
@@ -208,5 +210,9 @@ public class PropertyReader {
 
     public String getTwilioNumber () {
         return twilioNumber;
+    }
+
+    public String getTextMessageContent () {
+        return textMessageContent;
     }
 }
