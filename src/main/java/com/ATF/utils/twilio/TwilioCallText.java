@@ -25,7 +25,7 @@ public class TwilioCallText {
     public void sendText(String from, String to, String textMessage) {
 
         // TODO: 7/17/18 fix the hardcoded details below 
-        Twilio.init("ACff230bb14d5da16062cf9e8c433fa1fb", "9fcd8ab1ce3892292fcc2c028d88054d");
+        Twilio.init("AC05ef7a6af6f9adc4c90d372cd174fc15", "0e4e31110f38cd7958b9921a4f40f69f");
         Message message = Message.creator(
                 new com.twilio.type.PhoneNumber(to),
                 new com.twilio.type.PhoneNumber(from),

@@ -2,41 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="065bb9f5-695c-47d8-a58b-e77972b20728" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/utils/DBLoader.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Alabama Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Alabama Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Arkansas Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Arkansas Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Colorado Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Colorado Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Iowa Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Iowa Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Mass Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Mass Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/New Hampshire Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/New Hampshire Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/New Jersey Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/New Jersey Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/New Mexico Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/New Mexico Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/New York Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/New York Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/North Carolina Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/North Carolina Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Ohio Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Ohio Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Pennsylvania Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Pennsylvania Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Rhode Island Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Rhode Island Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/South Carolina Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/South Carolina Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Tennessee Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Tennessee Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Texas Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Texas Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Vermont Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Vermont Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Virginia Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Virginia Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/West Virginia Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/West Virginia Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/AlcoholCenters/Wyoming Alcohol Treatment.xlsx" afterPath="$PROJECT_DIR$/AlcoholCenters/Wyoming Alcohol Treatment.xlsx" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/storage/main/java/com/ATF/storage/addictioncenters/AddictionCentersFinderDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/storage/main/java/com/ATF/storage/addictioncenters/AddictionCentersFinderDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ATF/utils/twilio/TwilioCallText.java" afterPath="$PROJECT_DIR$/src/main/java/com/ATF/utils/twilio/TwilioCallText.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/skill.properties" afterPath="$PROJECT_DIR$/src/main/resources/skill.properties" />
-      <change beforePath="$PROJECT_DIR$/target/Addiction-Help-Finder-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/target/Addiction-Help-Finder-1.0-SNAPSHOT-jar-with-dependencies.jar" />
-      <change beforePath="$PROJECT_DIR$/target/Addiction-Help-Finder-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/Addiction-Help-Finder-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/skill/AddictionTreatmentFinderManager.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/skill/AddictionTreatmentFinderManager.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/main/java/com/ATF/storage/addictioncenters/AddictionCentersFinderDao.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/storage/main/java/com/ATF/storage/addictioncenters/AddictionCentersFinderDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/ATF/utils/PropertyReader.class" afterPath="$PROJECT_DIR$/target/classes/main/java/com/ATF/utils/PropertyReader.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/skill.properties" afterPath="$PROJECT_DIR$/target/classes/skill.properties" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AddictionTreatmentFinderManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddictionTreatmentFinderManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="716" column="33" lean-forward="false" selection-start-line="716" selection-start-column="33" selection-end-line="716" selection-end-column="33" />
+            <state relative-caret-position="155">
+              <caret line="163" column="30" lean-forward="true" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,11 +29,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TwilioCallText.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/utils/twilio/TwilioCallText.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="27" column="91" lean-forward="false" selection-start-line="27" selection-start-column="91" selection-end-line="27" selection-end-column="91" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="skill.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/skill.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="120">
+              <caret line="8" column="53" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -81,6 +59,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PropertyReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="79" column="24" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="24" />
+              <folding>
+                <element signature="e#6194#6195#0" expanded="true" />
+                <element signature="e#6229#6230#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -92,9 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>te</find>
-      <find>text</find>
-      <find>addictionTreatmentFinderDao</find>
       <find>city</find>
       <find>connect</find>
       <find>setU</find>
@@ -122,6 +110,9 @@
       <find>searc</find>
       <find>getI</find>
       <find>search</find>
+      <find>twilioNumber</find>
+      <find>8889730356</find>
+      <find>0e4e31110f38cd7958b9921a4f40f69f</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/java/com/ATF</dir>
@@ -178,7 +169,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/utils/twilio/TwilioLine.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/utils/twilio/AppSetup.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ATF/utils/twilio/TwilioCallText.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/main/java/com/ATF/storage/addictioncenters/AddictionCentersData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/main/java/com/ATF/storage/addictioncenters/AddictionCentersDataItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/main/java/com/ATF/storage/addictioncenters/AddictionCentersFinder.java" />
@@ -190,10 +180,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/main/java/com/ATF/storage/addictioncenters/AddictionCentersFinderUserDataItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/main/java/com/ATF/storage/addictioncenters/AddictionCentersFinderDynamoDbClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/skill.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/utils/DBLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/storage/main/java/com/ATF/storage/addictioncenters/AddictionCentersFinderDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/skill.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ATF/utils/twilio/TwilioCallText.java" />
       </list>
     </option>
   </component>
@@ -561,12 +552,12 @@
       <workItem from="1531922823713" duration="6092000" />
       <workItem from="1531971298713" duration="24831000" />
       <workItem from="1532092932384" duration="8443000" />
-      <workItem from="1532208368457" duration="5582000" />
+      <workItem from="1532208368457" duration="6909000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130139000" />
+    <option name="totallyTimeSpent" value="131466000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -721,16 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/utils/twilio/TwilioCallText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/storage/AddictionUserData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -869,29 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/skill.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="210" column="18" lean-forward="false" selection-start-line="210" selection-start-column="18" selection-end-line="210" selection-end-column="18" />
-          <folding>
-            <element signature="e#5933#5934#0" expanded="false" />
-            <element signature="e#5990#5991#0" expanded="false" />
-            <element signature="e#6194#6195#0" expanded="false" />
-            <element signature="e#6229#6230#0" expanded="false" />
-            <element signature="e#6275#6276#0" expanded="false" />
-            <element signature="e#6316#6317#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/utils/DBLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1021,13 +979,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/utils/PropertyReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="79" column="24" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="24" />
+          <folding>
+            <element signature="e#6194#6195#0" expanded="true" />
+            <element signature="e#6229#6230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/skill/AddictionTreatmentFinderManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="716" column="33" lean-forward="false" selection-start-line="716" selection-start-column="33" selection-end-line="716" selection-end-column="33" />
+        <state relative-caret-position="155">
+          <caret line="163" column="30" lean-forward="true" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/skill.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="53" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ATF/utils/twilio/TwilioCallText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="27" column="91" lean-forward="false" selection-start-line="27" selection-start-column="91" selection-end-line="27" selection-end-column="91" />
+          <folding />
         </state>
       </provider>
     </entry>
