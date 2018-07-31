@@ -1,0 +1,30 @@
+Prerequisites: 
+1. You will need Maven and Idea IDE installed on your computer. Get these here https://maven.apache.org/, https://www.jetbrains.com/
+2. Clone AlcoholAddictionHelpFinder from GitRepo under the root folder of your choice say “AlcoholAddictionHelpFinder”
+
+Skill artifacts:
+1. Lambda Name : AlcoholAddictionHelper : https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/AlcoholAddictionHelper
+2. S3 Bucket : quitdrinkingskillresource  : https://s3.console.aws.amazon.com/s3/buckets/quitdrinkingskillresource/?region=us-east-1
+3. DynamoDB : AddictionHelperUserData : https://console.aws.amazon.com/dynamodb/home?region=us-east-1#tables:selected=AddictionHelperUserData
+
+Q-1. How to change the text of the questions or the text message that Alexa asks?
+1. All questions and the content of the Text Messages are captured in the skill.properties file under AlcoholAddictionHelpFinder/src/main/resources
+2. Edit the skill.properties in the IDE of your choice (For example, Idea) and edit the content of Text message and/or question
+3. Go to the Bash Prompt on your computer’s terminal and from the root folder of “AlcoholAddictionHelpFinder” build the project using the following command - “mvn assembly:assembly -DdescriptorId=jar-with-dependencies package”
+4. Upload the Addiction-Help-Finder-1.0-jar-with-dependencies.jar to the S3 bucket. The jar is created under AlcoholAddictionHelpFinder/target once the project is built successfully
+5. Go to the Lambda, chose the option “Upload file from s3” under Code Entry Type. Provide the S3 URL, save and publish the Lambda
+6. Test the skill
+
+Q-2. How to query the user’s data for people who used the Skill?
+1. All user data is saved at AddictionHelperUserData table
+2. Go to the DDB table, where all data is saved. DDB allows querying of data as well as exporting the data in CSV format
+
+Q-3. How to change the speech that Alexa expects to hear from the user?
+1. All speechAssets are captured in skillBuilder.json under AlcoholAddictionHelpFinder/speechAssets. These are also published on the Alexa skill
+2. Go to the Alexa Skill, under the Alexa Console. Select and edit the in Development skill for the “Quit Drinking App”
+3. Traverse to Intents and select the intent where we need to make changes. For example “Add User” Intent. 
+4. Create the new invocation under the intent and save and build the model. Note some invocation changes may need backend code changes as well.
+5. Once the model is successfully built, copy the JSON from the JSON Editor, located towards the end of the Intents. Just above the Interfaces.
+6. Paste the JSON to skillBuilder.json
+7. Rebuild the project and deploy back to Lambda as per the instructions above in Q.1
+8. Test the skill
